@@ -1,0 +1,217 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morija Tabernacle</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #222;
+      color: white;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    .Logo {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .Logo a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .Logo a:hover {
+      color: orange;
+    }
+
+    h3 span {
+      color: orange;
+    }
+
+    .Picture img {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .Picture img:hover {
+      transform: scale(1.05);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Accueil avec image de fond */
+    .background-accueil {
+      background-image: url("ff2a1415cf1d8e1915d27fb157cfc861.png"); /* Nom exact de l’image dans le même dossier */
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .overlay h2, .overlay h3 {
+      margin: 10px;
+      animation: slideIn 2s ease forwards;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    form input {
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="Logo">
+    <a href="#Accueil">Accueil</a>
+    <a href="#apropos">À propos de nous</a>
+    <a href="#pasteur">Notre pasteur</a>
+    <a href="#cultes">Nos cultes</a>
+    <a href="#contact">Contact</a>
+    <a href="#don">Faire un don</a>
+  </div>
+
+  <!-- Accueil avec image de fond -->
+  <div class="header-texte fade-in background-accueil" id="Accueil">
+    <div class="overlay">
+      <h3><span>A</span>ccueil</h3>
+      <marquee direction="left"><h2>Soyez le bienvenu dans la page de notre église Morija Tabernacle</h2></marquee>
+    </div>
+  </div>
+
+  <div class="intro-texte fade-in">
+    <p>Nous sommes une église interdénominationnelle, prêchant le message du prophète de Dieu William Marrion Branham.</p>
+    <p>«Jésus-Christ est le même hier, aujourd'hui et éternellement» Hébreux 13:8</p>
+    <p>Rejoignez-nous chaque semaine pour des cultes vivants et édifiants.</p>
+  </div>
+
+  <div class="apropos fade-in" id="apropos">
+    <h3><span>A</span> propos de Nous</h3>
+    <p>L'église Morija Tabernacle est fondée en 2010. Une assemblée basée sur la Bible et le message du prophète William Marrion Branham.</p>
+    <p><b>Notre vision :</b> Amener chaque croyant à une relation personnelle avec Jésus-Christ.</p>
+    <p><b>Notre mission :</b> Prêcher l'Évangile, faire des disciples, et préparer un peuple prêt pour l’enlèvement.</p>
+  </div>
+
+  <div class="fade-in" id="pasteur">
+    <h3><span>N</span>otre pasteur </h3>
+    <div class="Picture">
+      <img src="IMG-20250515-WA0011.jpg" alt="Pasteur" width="300" id="imagePasteur">
+    </div>
+    <p><b>Pasteur Bongese Esongola Raphaël</b> est le berger principal de notre assemblée. Homme de prière, prédicateur inspiré, modèle de foi et d’amour pour les âmes.</p>
+  </div>
+
+  <div class="Nos cultes fade-in" id="cultes">
+    <h3><span>N</span>os cultes</h3>
+    <p><b>Horaires de services :</b></p>
+    <ul>
+      <li>Mercredi - Réunion de prière 17h30</li>
+      <li>Vendredi - Enseignement 17h30</li>
+      <li>Dimanche - Culte et adoration 9h30</li>
+    </ul>
+    <p><b>Adresse :</b> Lufu Frontière, Avenue du marché, quartier 03, en face de l'arrêt macon </p>
+    <p><b>Contact :</b> +243 852270001</p>
+  </div>
+
+  <div class="fade-in" id="contact">
+    <h3><span>C</span>ontact</h3>
+    <p>Vous avez une question ? Une prière ? Une demande particulière ?</p>
+    <form>
+      <label for="Téléphone">Téléphone:</label><br>
+      <input type="tel" id="Téléphone" name="Téléphone"><br><br>
+      <input type="submit" value="Envoyer"><br><br>
+    </form>
+    <p><b>Facebook :</b>Facebook.com/share/R8Rqdxvg</p>
+    <p><b>YouTube :</b>YouTube.com/@MORIJATABERNACLE</p>
+    <p><b>Instagram :</b>Instagram.com/p.raphael_esongola_ministere</p>
+  </div>
+
+  <div class="fade-in" id="don">
+    <h3><span>F</span>aire un don ou offrandes</h3>
+    <p>Soutenez l'œuvre de Dieu par vos offrandes et dons. Cela aide à poursuivre la mission et à soutenir ceux dans le besoin.</p>
+    <ul>
+      <li><b>Orange Money :</b> 0852270001</li>
+      <li><b>M-Pesa :</b> 0813536225</li>
+    </ul>
+    <marquee direction="left">
+      <h2>Merci pour votre participation. Que Dieu vous bénisse richement.</h2>
+    </marquee>
+  </div>
+
+  <script>
+    // Effet fade-in au scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    window.addEventListener('scroll', () => {
+      fadeElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    });
+
+    // Animation sur clic de la photo du pasteur
+    const imagePasteur = document.getElementById('imagePasteur');
+    imagePasteur.addEventListener('click', () => {
+      alert("Ceci est notre pasteur Bongese Esongola Raphaël.");
+      imagePasteur.style.border = "4px solid orange";
+    });
+  </script>
+
+</body>
+</html>
